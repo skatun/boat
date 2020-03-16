@@ -1,0 +1,51 @@
+
+	/* Lights */
+	
+	Group Group_Livingroom
+	Group Group_StarbordBedroom
+	Group Group_BabordBedroom
+	Group Group_FrontBedroom
+	Group Group_Bathroom
+
+	Group Group_Lights
+
+	Group Group_Livingroom_Lights(Group_Lights)
+	Group Group_StarbordBedroom_Lights(Group_Lights)
+	Group Group_BabordBedroom_Lights(Group_Lights)
+	Group Group_FrontBedroom_Lights(Group_Lights)
+	Group Group_Bathroom_Lights(Group_Lights)
+
+
+	Group Group_Scenes
+	Group Group_Dimmers
+	Group Group_Moods
+	Group Group_ColorPickers
+
+	Number Livingroom_Scene "Scene Selector"(Group_Scenes)
+	Number FrontBedroom_Scene "Scene Selector"(Group_Scenes)
+	Number Bathroom_Scene "Scene Selector"(Group_Scenes)
+	Number StarbordBedroom_Scene "Scene Selector"(Group_Scenes)
+	Number BabordBedroom_Scene "Scene Selector"(Group_Scenes)
+
+
+	Color Livingroom_ColorPicker "Living room" (Group_ColorPickers) ["Lighting"]
+	Color FrontBedroom_ColorPicker "Front Bedroom" (Group_ColorPickers) ["Lighting"]
+	Color StarbordBedroom_ColorPicker "Starbord Bedroom" (Group_ColorPickers) ["Lighting"]
+	Color BabordBedroom_ColorPicker "Babord Bedroom" (Group_ColorPickers) ["Lighting"]
+	Color Bathroom_ColorPicker "Bathroom" (Group_ColorPickers) ["Lighting"]
+
+	Number Livingroom_MoodSelector "Mood Selector" (Group_Moods)
+	Number FrontBedroom_MoodSelector "Mood Selector" (Group_Moods)
+	Number StarbordBedroom_MoodSelector "Mood Selector" (Group_Moods)
+	Number BabordBedroom_MoodSelector "Mood Selector" (Group_Moods)
+	Number Bathroom_MoodSelector "Mood Selector" (Group_Moods)
+
+	Dimmer Livingroom_Dimmer "Dimmer" (Group_Dimmers)
+	Dimmer FrontBedroom_Dimmer "Dimmer" (Group_Dimmers)
+	Dimmer StarbordBedroom_Dimmer "Dimmer" (Group_Dimmers)
+	Dimmer BabordBedroom_Dimmer "Dimmer" (Group_Dimmers)
+	Dimmer Bathroom_Dimmer "Dimmer" (Group_Dimmers)
+	
+	Switch Light_All_Off "All Light" [ "Lighting" ]
+	
+	

@@ -1,0 +1,126 @@
+sitemap amazingRace label="amazingRace"
+{
+		Text label="General" icon="groundfloor"{
+			Switch item=Light_All_Off
+			Selection item=VillaventFan icon=qualityofservice mappings=[4="Auto", 3="Max", 2="Normal", 1="Low", 0="Off"]
+			Default item=CPU_Load
+			Default item=CPU_Uptime 
+			Default item=Sensor_CPUTemp 
+			Text item=vTimeOfDay label="Time of the day [%s]"
+			Text item=Group_CO2_Max label="CO2 max level [%d ppm]"
+			Text item=Group_Noise_Max label="Noise max level [%d dB]"
+			Text item=Group_Humidity_Max label="Humidity max level [%d %%]"
+			Switch item=Presence_Home label="Somebody is home"
+			
+		}
+		Text label="Living Room" icon="groundfloor"{
+			Frame label="Lights" {
+				Selection item=Livingroom_Scene label="Scene selector" mappings=[0="OFF", 1="ON", 3="NIGHT", 4="READING",5="KITCHEN",6="DINNER",7="COOKING",8="LOUNGE",9="FIREPLACE",10="BAR"]
+				Selection item=Livingroom_MoodSelector label="Mood selector" mappings=[1="WARM WHITE", 2="WHITE", 3="LOUNGE",4="NIGHT"]
+				Slider item=Livingroom_Dimmer label="Dimmer" icon="slider"
+				Colorpicker item=Livingroom_ColorPicker label="Color Wheel" icon="colorwheel" 
+			}
+            Frame label="Temperature" {
+				Setpoint item=Livingroom_Heating_Setpoint label="Temperature Set Point  [%.1f °C]" icon="temperature" minValue=1 maxValue=30 step=0.5
+				Text item=Livingroom_Temperature label="Average Temperature  [%.1f °C]" icon="temperature"
+				Switch item=Livingroom_Heating  label="Heating Livingroom status" icon="temperature" 
+                Switch item=Kitchen_Heating  label="Heating Kitchen status" icon="temperature" 
+			}
+           
+			
+			Frame label="Air/Living Quality" {
+				Text item=Livingroom_CO2 label="Co2 [%d %unit%]"  icon="carbondioxide"
+				Text item=Livingroom_Humidity_Netatmo label="Humidity [%d %unit%]" icon="humidity"
+				Text item=Livingroom_Noise_Netatmo label="Noise [%d %unit%]" icon="soundvolume"
+			}
+
+            Frame label="Media"{
+                //Setpoint  item=Echo_Living_Room_Volume   minValue=0  maxValue=100 step=5
+                Text item=Echo_Livingroom_NextAlarm label="Next alarm [%1$td/%1$tm/%1$tY %1$tH:%1$tM]" 
+                Text item=Echo_Kitchen_NextAlarm label="Next alarm [%1$td/%1$tm/%1$tY %1$tH:%1$tM]" 
+            }
+
+			
+		}	
+        
+		Text label="Front Bedroom" icon="corridor"{
+            Frame label="Light" {
+                Selection item=FrontBedroom_Scene label="Scene selector" mappings=[0="OFF", 1="ON", 3="NIGHT"]
+            }		
+
+            Frame label="Temperature" {
+				Setpoint item=FrontBedroom_Heating_Setpoint label="Temperature Set Point  [%.1f °C]" icon="temperature" minValue=1 maxValue=30 step=0.5
+				Text item=FrontBedroom_Temperature label="Average Temperature  [%.1f °C]" icon="temperature"
+				Switch item=FrontBedroom_Heating  label="Heating status" icon="temperature" 
+			}
+		}
+		
+		Text label="Starbord Bedroom" icon="bedroom"{
+			Frame label="Lights" {
+				Selection item=StarbordBedroom_Scene label="Scene selector" mappings=[0="OFF", 1="ON", 3="NIGHT", 4="READING"]
+				Selection item=StarbordBedroom_MoodSelector label="Mood selector" mappings=[1="WARM WHITE", 2="WHITE", 3="LOUNGE",4="NIGHT"]
+				Slider item=StarbordBedroom_Dimmer label="Dimmer" icon="slider"
+				Colorpicker item=StarbordBedroom_ColorPicker label="Color Wheel" icon="colorwheel" 
+				
+			}
+			Frame label="Temperature" {
+				Setpoint item=StarbordBedroom_Heating_Setpoint label="Temperature Set Point  [%.1f °C]" icon="temperature" minValue=1 maxValue=30 step=0.5
+				Text item=StarbordBedroom_Temperature label="Average Temperature  [%.1f °C]" icon="temperature"
+				Switch item=StarBedroom_Heating  label="Heating status" icon="temperature" 
+            }
+
+			/*
+            Frame label="Air/Living Quality" {
+				Text item=MasterBedroom_CO2 label="Co2 [%d %unit%]"  icon="carbondioxide"
+				Text item=MasterBedroom_Humidity_Netatmo label="Humidity [%d %unit%]" icon="humidity"
+			}
+			Frame label="Media"{
+                //Setpoint  item=Echo_Living_Room_Volume   minValue=0  maxValue=100 step=5
+                Text item=Echo_MasterBedroom_NextAlarm label="Next alarm [%1$td/%1$tm/%1$tY %1$tH:%1$tM]" 
+				Text item=Echo_MasterBedroom_NextMusicAlarm label="Next alarm [%1$td/%1$tm/%1$tY %1$tH:%1$tM]" 
+           }
+		   */
+		}
+        
+		Text label="BabordBedroom" icon="bedroom"{
+			
+			Frame label="Lights" {
+                Selection item=BabordBedroom_Scene label="Scene selector" mappings=[0="OFF", 1="ON", 3="NIGHT", 4="READING"]
+				Selection item=BabordBedroom_MoodSelector label="Mood selector" mappings=[1="WARM WHITE", 2="WHITE", 3="LOUNGE",4="NIGHT"]
+				Slider item=BabordBedroom_Dimmer label="Dimmer" icon="slider"
+				Colorpicker item=BabordBedroom_ColorPicker label="Color Wheel" icon="colorwheel" 
+				
+			}
+			
+			Frame label="Temperature" {
+				Setpoint item=BabordBedroom_Heating_Setpoint label="Temperature Set Point  [%.1f °C]" icon="temperature" minValue=1 maxValue=30 step=0.5
+				Text item=BabordBedroom_Temperature label="Average Temperature  [%.1f °C]" icon="temperature"
+				Switch item=BabordBedroom_Heating  label="Heating status" icon="temperature" 
+			}
+
+			/*
+            Frame label="Air/Living Quality" {
+				Text item=BabordBedroom_CO2 label="Co2 [%d %unit%]"  icon="carbondioxide"
+				Text item=BabordBedroom_Humidity_Netatmo label="Humidity [%d %unit%]" icon="humidity"
+			}
+			*/
+		}
+		
+		Text label="Bathroom" icon="bath"{
+            Frame label="Lights" {
+			    Selection item=Bathroom_Scene label="Scene selector" mappings=[0="OFF", 1="ON", 3="NIGHT", 4="SHOWER"]
+			    Selection item=Bathroom_MoodSelector label="Mood selector" mappings=[1="WARM WHITE", 2="WHITE", 3="LOUNGE",4="NIGHT"]
+				Slider item=Bathroom_Dimmer label="Dimmer" icon="slider"
+				Colorpicker item=Bathroom_ColorPicker label="Color Wheel" icon="colorwheel" 
+				
+            }
+
+            Frame label="Temperature" {
+				Setpoint item=Bathroom_Heating_Setpoint label="Temperature Set Point  [%.1f °C]" icon="temperature" minValue=1 maxValue=30 step=0.5
+				Text item=Bathroom_Temperature label="Average Temperature  [%.1f °C]" icon="temperature"
+				Switch item=Bathroom_Heating  label="Heating status" icon="temperature" 
+			}
+		}
+
+       
+}
