@@ -13,6 +13,16 @@ sitemap amazingRace label="amazingRace"
 			Switch item=Presence_Home label="Somebody is home"
 			
 		}
+		
+		Text label="Systems" icon="groundfloor"{
+			Frame label="Engine" {
+				Switch=Ignition
+				Switch=Motor_Start
+				Selection item=Gear_Position label="Gear Position" mappings=[0="Neutral", 1="Forward", -1="Reverse"]
+
+			}
+			
+		}
 		Text label="Living Room" icon="groundfloor"{
 			Frame label="Lights" {
 				Selection item=Livingroom_Scene label="Scene selector" mappings=[0="OFF", 1="ON", 3="NIGHT", 4="READING",5="KITCHEN",6="DINNER",7="COOKING",8="LOUNGE",9="FIREPLACE",10="BAR"]
